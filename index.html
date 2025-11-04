@@ -18,28 +18,9 @@
             overflow-x: hidden;
         }
 
-        .cursor-dot {
-            width: 8px;
-            height: 8px;
-            background: #00ff88;
-            border-radius: 50%;
-            position: fixed;
-            pointer-events: none;
-            z-index: 10000;
-            transition: transform 0.15s ease;
-        }
+      
 
-        .cursor-ring {
-            width: 30px;
-            height: 30px;
-            border: 2px solid rgba(0, 255, 136, 0.5);
-            border-radius: 50%;
-            position: fixed;
-            pointer-events: none;
-            z-index: 10000;
-            transition: all 0.2s ease;
-        }
-
+        
         nav {
             position: fixed;
             top: 0;
@@ -716,8 +697,7 @@
     </style>
 </head>
 <body>
-    <div class="cursor-dot"></div>
-    <div class="cursor-ring"></div>
+   
 
     <nav>
         <div class="logo">ST</div>
@@ -1137,19 +1117,7 @@
     </footer>
 
     <script>
-        // Custom cursor
-        const cursorDot = document.querySelector('.cursor-dot');
-        const cursorRing = document.querySelector('.cursor-ring');
-        
-        document.addEventListener('mousemove', (e) => {
-            cursorDot.style.left = e.clientX + 'px';
-            cursorDot.style.top = e.clientY + 'px';
-            
-            setTimeout(() => {
-                cursorRing.style.left = e.clientX + 'px';
-                cursorRing.style.top = e.clientY + 'px';
-            }, 50);
-        });
+       
 
         // Smooth scrolling with error handling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
